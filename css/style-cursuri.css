@@ -1,0 +1,87 @@
+
+/* =============================================================================
+  Titlul paginii
+============================================================================= */
+#title{
+  margin:50px 0 30px 0;
+}
+
+/* =============================================================================
+  Setari pentru meniul din stanga
+============================================================================= */
+#cursuriPanel #leftMenu li.unactive{
+  color:#96281B;
+}
+
+#cursuriPanel #leftMenu{
+  list-style: none;
+  color:#26A65B;
+}
+
+#cursuriPanel #leftMenu  li{
+  cursor: pointer;
+  color:#26A65B;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  #cursuriPanel #leftMenu  li{
+    margin: 0 0 15px 25px;
+    text-align: left;
+  }
+}
+
+/* =============================================================================
+  Setari pentru continutul din dreapta meniului
+============================================================================= */
+.tab-content {
+  position: relative;
+}
+
+.tab-content .contentContainer{
+  position: absolute;
+  opacity: 1;
+  -webkit-transition:all 0.6s;
+  transition: all 0.6s;
+}
+
+.tab-content .section{
+  border-top: 1px solid #26A65B;
+  padding-top: 20px;
+}
+
+.section #leftMenu{
+  margin-left:40px;
+}
+
+.courseInfo{
+  line-height: 120%;
+
+}
+
+.tab-content .section h4{
+  margin-top: 20px;
+}
+
+button{
+  background: transparent;
+    outline: 0px none transparent;
+    border:2px solid #26A65B;
+    padding: 5px;
+    color:#26A65B;
+    cursor: pointer;
+}
+
+button:hover{
+  background: #26A65B;
+  color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+  .tab-content{
+      text-align: center;
+        margin-top: 30px;
+      background-color: #fafafa;
+  }
+}
