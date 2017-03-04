@@ -356,12 +356,17 @@
 	<script src="js/main.js"></script>
   <script>
 
+
   show('primiiPasi');
   function show(x){
     var colection=document.getElementsByClassName("contentContainer");
     for(var i=0;i<colection.length;i++)
-      colection[i].style.opacity=0;
+      {
+        colection[i].style.opacity=0;
+        colection[i].style.zIndex='1';
+      }
     document.getElementById(x).style.opacity=1;
+    document.getElementById(x).style.zIndex='2';
   }
 
 
