@@ -55,175 +55,157 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<style>
+	.thumbnails img {
+		height: 150px;
+		border: 4px solid #555;
+		padding: 1px;
+		margin: 0 10px 10px 0;
+	}
 
-a.lightbox img {
-height: 150px;
-border: 3px solid white;
-box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-margin: 94px 20px 20px 20px;
-}
+	.thumbnails img:hover {
+		border: 4px solid #00ccff;
+		cursor:pointer;
+	}
 
-/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+	.preview img {
+		border: 4px solid #444;
+		padding: 1px;
+		width: 70%;
+		animation: fadeIn 0.7s;
+	}
+	@keyframes fadeIn {
+		form{
+			opacity: 0;
+		}
+		to{
+			opacity: 1;
+		}
 
-.lightbox-target {
-position: fixed;
-top: -100%;
-width: 100%;
-background: rgba(0,0,0,.7);
-width: 100%;
-opacity: 0;
--webkit-transition: opacity .5s ease-in-out;
--moz-transition: opacity .5s ease-in-out;
--o-transition: opacity .5s ease-in-out;
-transition: opacity .5s ease-in-out;
-overflow: hidden;
-}
-
-/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
-
-.lightbox-target img {
-margin: auto;
-position: absolute;
-top: 0;
-left:0;
-right:0;
-bottom: 0;
-max-height: 0%;
-max-width: 0%;
-border: 3px solid white;
-box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-box-sizing: border-box;
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
-}
-
-/* Styles the close link, adds the slide down transition */
-
-a.lightbox-close {
-display: block;
-width:50px;
-height:50px;
-box-sizing: border-box;
-background: white;
-color: black;
-text-decoration: none;
-position: absolute;
-top: -80px;
-right: 0;
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
-}
-
-
-
-a.lightbox-close:before {
-content: "";
-display: block;
-height: 30px;
-width: 1px;
-background: black;
-position: absolute;
-left: 26px;
-top:10px;
--webkit-transform:rotate(45deg);
--moz-transform:rotate(45deg);
--o-transform:rotate(45deg);
-transform:rotate(45deg);
-}
-
-/* Provides part of the "X" to eliminate an image from the close link */
-
-a.lightbox-close:after {
-content: "";
-display: block;
-height: 30px;
-width: 1px;
-background: black;
-position: absolute;
-left: 26px;
-top:10px;
--webkit-transform:rotate(-45deg);
--moz-transform:rotate(-45deg);
--o-transform:rotate(-45deg);
-transform:rotate(-45deg);
-}
-
-/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
-
-.lightbox-target:target {
-opacity: 1;
-top: 0;
-bottom: 0;
-}
-
-.lightbox-target:target img {
-max-height: 100%;
-max-width: 100%;
-}
-
-.lightbox-target:target a.lightbox-close {
-top: 0px;
-}>
-
+	}
 
 	</style>
 	</head>
 	<body>
-
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 	<div class="gtco-loader"></div>
 
-	<nav class="gtco-nav" role="navigation">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-xs-2">
-					<div id="gtco-logo"><a href="index.html">Academia de Info</a></div>
-				</div>
-				<div class="col-xs-8 text-center menu-1">
-					<ul>
-						<li class="btn-cta"><a href="#"><span>Home</span></a></li>
-						<li class="btn-cta"><a href="#servicii" class="smoothScroll"><span>Servicii</span></a></li>
-						<li class="btn-cta"><a href="#video" class="smoothScroll"><span>Video</span></a></li>
-						<li class="btn-cta"><a href="#cursuri" class="smoothScroll"><span>Cursuri</span></a></li>
-						<li class="btn-cta"><a href="galerie.html"><span>Galerie</span></a></li>
-						<li class="btn-cta"><a href="contact.html"><span>Contact</span></a></li>
-						<!--<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="servicii.html">Servicii</a></li>
-						<li><a href="video.html">Video</a></li>
-						<li><a href="cursuri.html">Cursuri</a></li>
-						<li class="has-dropdown">
-							<a href="services.html">Services</a>
-							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>-->
+		<nav class="gtco-nav" style="background-color: #0c815e;" role="navigation">
+			<div class="gtco-container">
+				<div class="row" style="width: 100%;">
+					<div class="col-xs-2">
+						<div id="gtco-logo"><a href="index.html">Academia de Info</a></div>
+					</div>
+					<div class="col-xs-8 text-center menu-1">
+						<ul>
+							<li class="btn-cta"><a href="index.html"><span>Home</span></a></li>
+							<li class="btn-cta"><a href="services.html" class="smoothScroll"><span>Servicii</span></a></li>
 
-					</ul>
+							<li class="btn-cta"><a href="cursuri.html" class="smoothScroll"><span>Cursuri</span></a></li>
+							<li class="btn-cta"><a href="preinscriere.html"><span>Preinscriere</span></a></li>
+							<li class="btn-cta"><a href="galerie.html"><span>Galerie</span></a></li>
+
+							<li class="btn-cta"><a href="contact.html"><span>Contact</span></a></li>
+							<!--<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="servicii.html">Servicii</a></li>
+							<li><a href="video.html">Video</a></li>
+							<li><a href="cursuri.html">Cursuri</a></li>
+							<li class="has-dropdown">
+								<a href="services.html">Services</a>
+								<ul class="dropdown">
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">eCommerce</a></li>
+									<li><a href="#">Branding</a></li>
+									<li><a href="#">API</a></li>
+								</ul>
+							</li>-->
+
+						</ul>
+					</div>
+					<div class="col-xs-2 text-right hidden-xs menu-2">
+						<ul>
+							<li class="btn-cta" onclick="myFunction()"><a href="#"><span>Login</span></a></li>
+							<script>
+							function myFunction() {
+							    alert("Nu esti autorizat !");
+							}
+							</script>
+						</ul>
+					</div>
 				</div>
-				<div class="col-xs-2 text-right hidden-xs menu-2">
-					<ul>
-						<li class="btn-cta"><a href="login.html"><span>Login</span></a></li>
-					</ul>
-				</div>
+
+			</div>
+		</nav>
+		
+<br><Br><br><br>
+	<div class="row">
+		<center><h1>FOTOGRAFII<h1></center><br>
+		<div class="preview" align="center">
+			<img name="preview" src="images/gallery/1.jpg" alt=""/>
+		</div><center><br><Br>
+		<div class="thumbnails">
+			<div class="col-xs-3">
+				<img onclick="preview.src=img1.src" name="img1" src="images/gallery/1.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+				<img onclick="preview.src=img2.src" name="img2" src="images/gallery/2.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+				<img onclick="preview.src=img3.src" name="img3" src="images/gallery/3.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+				<img onclick="preview.src=img4.src" name="img4" src="images/gallery/4.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+				<img onclick="preview.src=img5.src" name="img5" src="images/gallery/5.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+				<img onclick="preview.src=img6.src" name="img6" src="images/gallery/6.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+				<img onclick="preview.src=img7.src" name="img7" src="images/gallery/7.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+				<img onclick="preview.src=img8.src" name="img8" src="images/gallery/8.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+				<img onclick="preview.src=img9.src" name="img9" src="images/gallery/9.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+				<img onclick="preview.src=img10.src" name="img10" src="images/gallery/10.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+					<img onclick="preview.src=img11.src" name="img11" src="images/gallery/11.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+					<img onclick="preview.src=img12.src" name="img12" src="images/gallery/12.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+					<img onclick="preview.src=img13.src" name="img13" src="images/gallery/13.jpg" alt=""/>
+			</div>
+			<div class="col-xs-3">
+					<img onclick="preview.src=img14.src" name="img14" src="images/gallery/14.jpg" alt=""/>
 			</div>
 
-		</div>
-	</nav>
-<br><Br><br><br>
-	<a class="lightbox" href="#goofy">
-	   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/158388/goofy.jpg"/>
-	</a>
-	<div class="lightbox-target" id="goofy">
-	   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/158388/goofy.jpg"/>
-	   <a class="lightbox-close" href="#"></a>
+
+		</div><br/></center><br><br><br>
+	</div>
+	<div class="row">
+			<center><h1>VIDEOCLIPURI<h1><br>
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Facademiadeinformatica%2Fvideos%2F1735599496751445%2F&width=800&show_text=false&height=343&appId" width="70%" height="900px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</center>
 	</div>
 
+
+
+
+</div>
 
 
 

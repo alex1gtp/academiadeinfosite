@@ -70,7 +70,7 @@
 								Centru de Formare și Excelență in Informatica <br>
 								pentru elevi, studenți si tineri.<br>
 								</h2>
-								<p><a href="#" class="btn btn-default">Galerie</a></p>
+								<p><a href="galerie.html" class="btn btn-default">Galerie</a></p>
 							</div>
 						</div>
 					</div>
@@ -87,11 +87,13 @@
 				</div>
 				<div class="col-xs-8 text-center menu-1">
 					<ul>
-						<li class="btn-cta"><a href="#"><span>Home</span></a></li>
-						<li class="btn-cta"><a href="#servicii" class="smoothScroll"><span>Servicii</span></a></li>
-						<li class="btn-cta"><a href="#video" class="smoothScroll"><span>Video</span></a></li>
-						<li class="btn-cta"><a href="#cursuri" class="smoothScroll"><span>Cursuri</span></a></li>
+						<li class="btn-cta"><a href="index.html"><span>Home</span></a></li>
+						<li class="btn-cta"><a href="services.html" class="smoothScroll"><span>Servicii</span></a></li>
+
+						<li class="btn-cta"><a href="cursuri.html" class="smoothScroll"><span>Cursuri</span></a></li>
+						<li class="btn-cta"><a href="preinscriere.html"><span>Preinscriere</span></a></li>
 						<li class="btn-cta"><a href="galerie.html"><span>Galerie</span></a></li>
+
 						<li class="btn-cta"><a href="contact.html"><span>Contact</span></a></li>
 						<!--<li class="active"><a href="index.html">Home</a></li>
 						<li><a href="servicii.html">Servicii</a></li>
@@ -111,13 +113,19 @@
 				</div>
 				<div class="col-xs-2 text-right hidden-xs menu-2">
 					<ul>
-						<li class="btn-cta"><a href="login.html"><span>Login</span></a></li>
+						<li class="btn-cta" onclick="myFunction()"><a href="#"><span>Login</span></a></li>
+						<script>
+						function myFunction() {
+						    alert("Nu esti autorizat !");
+						}
+						</script>
 					</ul>
 				</div>
 			</div>
 
 		</div>
 	</nav>
+
 	<div id="myCarouselWrapper" class="container-fluid" style="margin-top: 920px;">
 
 			 <div id="myCarousel" class="carousel slide">
@@ -248,7 +256,7 @@
 					<p>Pregătirea în informatică poate începe încă din gimnaziu. Nu este nevoie de cunoștințe prealabile.</p>
 					<p>Informatica este singura disciplină pentru care, la nivel de gimnaziu (clasele V-VIII) există o Olimpiadă Națională, în ciuda faptului că disciplina nu este prezentă în planurile cadru. Este vorba de acea ramură a Informaticii care se ocupă de Algoritmi și Programare în C++, nu doar de utilizarea calculatorului (TIC).</p>
 					<p>Cei mai buni cursanți vor fi pregătiți pentru participare la concursurile și olimpiadele școlare naționale și internaționale.</p>
-					<p><a href="#" class="btn btn-primary">Cursurile noastre</a></p>
+					<p><a href="cursuri.html" class="btn btn-primary">Cursurile noastre</a></p>
 				</div>
 			</div>
 		</div>
@@ -316,7 +324,7 @@
 
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>Cursuri</h2>
+					<h2>Cursuri disponibile</h2>
 					<p>O scurta prezentare a cursurilor oferite de catre Academia de Informatica - Brasov.</p>
 					<br>
 				<img src="images/bars.png"/></center><br></br>
@@ -465,36 +473,7 @@ Dinamic: adaugă animații, acțiuni și meniuri avansate<br>
 	</div>
 
 
-	<div id="gtco-started">
-		<div class="gtco-container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>Sa incepem !</h2>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-12">
-					<form class="form-inline">
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="password" class="sr-only">Parola</label>
-								<input type="password" class="form-control" id="password" placeholder="Password">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">Inscrie-te</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.710971815439!2d25.62503831582746!3d45.656625728603444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35c717c2d6417%3A0xfa3a36f146e9430f!2sAcademia+de+Informatic%C4%83+Bra%C8%99ov!5e0!3m2!1sro!2sro!4v1488643004162" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	<footer id="gtco-footer" role="contentinfo">
 		<div class="gtco-container">
