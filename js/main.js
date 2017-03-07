@@ -1,5 +1,5 @@
 ;(function () {
-	
+
 	'use strict';
 
 	var mobileMenuOutsideClick = function() {
@@ -12,20 +12,50 @@
 
     			$('body').removeClass('offcanvas');
     			$('.js-gtco-nav-toggle').removeClass('active');
-				
+
 	    	}
-	    
-	    	
+
+
 	    }
 		});
 
 	};
+	(function($) {
+	    "use strict"; // Start of use strict
 
+	    // jQuery for page scrolling feature - requires jQuery Easing plugin
+	    $('a.page-scroll').bind('click', function(event) {
+	        var $anchor = $(this);
+	        $('html, body').stop().animate({
+	            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+	        }, 1250, 'easeInOutExpo');
+	        event.preventDefault();
+	    });
+
+	    // Highlight the top nav as scrolling occurs
+	    $('body').scrollspy({
+	        target: '.navbar-fixed-top',
+	        offset: 51
+	    });
+
+	    // Closes the Responsive Menu on Menu Item Click
+	    $('.navbar-collapse ul li a').click(function(){
+	            $('.navbar-toggle:visible').click();
+	    });
+
+	    // Offset for Main Navigation
+	    $('#mainNav').affix({
+	        offset: {
+	            top: 100
+	        }
+	    })
+
+	})(jQuery);
 
 	var offcanvasMenu = function() {
 
 		$('#page').prepend('<div id="gtco-offcanvas" />');
-		$('#page').prepend('<a href="#" class="js-gtco-nav-toggle gtco-nav-toggle gtco-nav-white"><i></i></a>');
+
 		var clone1 = $('.menu-1 > ul').clone();
 		$('#gtco-offcanvas').append(clone1);
 		var clone2 = $('.menu-2 > ul').clone();
@@ -43,14 +73,14 @@
 			$this
 				.addClass('active')
 				.find('ul')
-				.slideDown(500, 'easeOutExpo');				
+				.slideDown(500, 'easeOutExpo');
 		}).mouseleave(function(){
 
 			var $this = $(this);
 			$this
 				.removeClass('active')
 				.find('ul')
-				.slideUp(500, 'easeOutExpo');				
+				.slideUp(500, 'easeOutExpo');
 		});
 
 
@@ -60,7 +90,7 @@
 
     			$('body').removeClass('offcanvas');
     			$('.js-gtco-nav-toggle').removeClass('active');
-				
+
 	    	}
 		});
 	};
@@ -90,7 +120,7 @@
 		$('.animate-box').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('animated-fast') ) {
-				
+
 				i++;
 
 				$(this.element).addClass('item-animate');
@@ -113,9 +143,9 @@
 							el.removeClass('item-animate');
 						},  k * 200, 'easeInOutExpo' );
 					});
-					
+
 				}, 100);
-				
+
 			}
 
 		} , { offset: '85%' } );
@@ -145,7 +175,7 @@
 
 
 	var testimonialCarousel = function(){
-		
+
 		var owl = $('.owl-carousel-fullwidth');
 		owl.owlCarousel({
 			items: 1,
@@ -184,7 +214,7 @@
 				});
 
 			}, 100);
-			
+
 		};
 
 		autoHeight();
@@ -192,7 +222,7 @@
 
 		// Click tab menu
 		$('.gtco-tab-nav a').on('click', function(event){
-			
+
 			var $this = $(this),
 				tab = $this.data('tab');
 
@@ -200,7 +230,7 @@
 				.addClass('animated-fast fadeOutDown');
 
 			$('.gtco-tab-nav li').removeClass('active');
-			
+
 			$this
 				.closest('li')
 					.addClass('active')
@@ -215,20 +245,20 @@
 			autoHeight();
 			event.preventDefault();
 
-		}); 
+		});
 	};
 
 
 	var goToTop = function() {
 
 		$('.js-gotop').on('click', function(event){
-			
+
 			event.preventDefault();
 
 			$('html, body').animate({
 				scrollTop: $('html').offset().top
 			}, 500, 'easeInOutExpo');
-			
+
 			return false;
 		});
 
@@ -242,9 +272,9 @@
 			}
 
 		});
-	
+
 	};
-	
+
 
 
 	// Loading page
@@ -263,16 +293,16 @@
 	var counterWayPoint = function() {
 		if ($('#gtco-counter').length > 0 ) {
 			$('#gtco-counter').waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);					
+					setTimeout( counter , 400);
 					$(this.element).addClass('animated');
 				}
 			} , { offset: '90%' } );
 		}
 	};
 
-	
+
 	$(function(){
 		mobileMenuOutsideClick();
 		offcanvasMenu();

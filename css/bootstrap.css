@@ -3583,10 +3583,14 @@ tbody.collapse.in {
 }
 
 .navbar {
-  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
   min-height: 55px;
   margin-bottom: 20px;
   border: 1px solid transparent;
+  margin-right: auto;
+  margin-left: auto;
 }
 .navbar:before, .navbar:after {
   content: " ";
