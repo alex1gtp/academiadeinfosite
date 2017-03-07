@@ -22,7 +22,9 @@
   cursor: pointer;
   color:#26A65B;
   position: relative;
+  font-size: 18px;
   margin: 0 0 15px 0;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -52,16 +54,42 @@ width:              50%;
 /* =============================================================================
   Setari pentru continutul din dreapta meniului
 ============================================================================= */
+.fadeIn2{
+  animation: fadeIn2 1s;
+ -moz-animation: fadeIn2 1s; /* Firefox */
+ -webkit-animation: fadeIn2 1s; /* Safari and Chrome */
+ -o-animation: fadeIn2 1s; /* Opera */
+}
+
+@keyframes fadeIn2 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeIn2 { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
 .tab-content {
   position: relative;
 }
 
+
 .tab-content .contentContainer{
   position: absolute;
   opacity: 1;
+
   z-index: 1;
-  -webkit-transition:all 0.6s;
-  transition: all 0.6s;
+
 }
 
 .tab-content .section{
@@ -75,7 +103,6 @@ width:              50%;
 
 .courseInfo{
   line-height: 120%;
-
 }
 
 .tab-content .section h4{
@@ -102,4 +129,8 @@ button:hover{
         margin-top: 30px;
       background-color: #fafafa;
   }
+
+.tab-content .contentContainer{
+  position: relative;
+}
 }

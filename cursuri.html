@@ -138,14 +138,14 @@
       </div>
     </div>
     <div class="row" style="width: 100%;" >
-      <div class="col-md-3 col-sm-12 col-xs-12">
+      <div class="col-md-3 col-sm-12 col-xs-12" id="contentExpand">
         <div id="cursuriPanel">
           <ul id="leftMenu">
-            <a><li class="active" onclick="show('primiiPasi')">Primii Pasi in IT</li></a>
-            <a><li class="active" onclick="show('CI')">C++ Baze Modul I</li></a>
-            <li class="active"  onclick="show('robo')">Robotica-Lego League</li>
-            <li class="active"  onclick="show('appInventor')">App Inventor</li>
-            <li class="active"  onclick="show('web')">WEB: Front-End</li>
+            <a><li class="active" onclick="show('primiiPasi',false)">Primii Pasi in IT</li></a>
+            <a><li class="active" onclick="show('CI',true)">C++ Baze Modul I</li></a>
+            <li class="active"  onclick="show('robo',false)">Robotica-Lego League</li>
+            <li class="active"  onclick="show('appInventor',false)">App Inventor</li>
+            <li class="active"  onclick="show('web',false)">WEB: Front-End</li>
             <li class="unactive">C++ Baze Modul II</li>
             <li class="unactive">C++ Baze Modul III</li>
             <li class="unactive">C++ Baze Modul IV</li>
@@ -157,7 +157,7 @@
 
       <div class="col-md-9 col-sm-12 col-xs-12">
         <div class="tab-content">
-          <div id="primiiPasi" class="contentContainer">
+          <div id="primiiPasi" class="contentContainer fadeIn2">
             <div class="row">
               <div class="col-md-8 col-sm-12 col-xs-12">
                 <h3>Primii Pasi in IT</h3>
@@ -195,7 +195,7 @@
             </div>
           </div><!--END PRIMII PASI -->
 
-          <div id="CI" class="contentContainer">
+          <div id="CI" class="contentContainer fadeIn2">
             <div class="row">
               <div class="col-md-8 col-sm-12 col-xs-12">
                 <h3>Bazele Programării: C++ Modulul I</h3>
@@ -241,7 +241,7 @@
             </div>
           </div><!--END C++ Bzze Modului I  -->
 
-          <div id="robo" class="contentContainer">
+          <div id="robo" class="contentContainer fadeIn2">
             <div class="row">
               <div class="col-md-8 col-sm-12 col-xs-12">
                 <h3>Robotică - Lego League</h3>
@@ -275,7 +275,7 @@
             </div>
           </div><!--END Robotica  -->
 
-          <div id="appInventor" class="contentContainer">
+          <div id="appInventor" class="contentContainer fadeIn2">
             <div class="row">
               <div class="col-md-8 col-sm-12 col-xs-12">
                 <h3>App Inventor</h2>
@@ -309,7 +309,7 @@
             </div>
           </div><!--END App Invetor -->
 
-          <div id="web" class="contentContainer">
+          <div id="web" class="contentContainer fadeIn2">
             <div class="row">
               <div class="col-md-8 col-sm-12 col-xs-12">
                 <h3>WEB: Front-End Development</h2>
@@ -336,6 +336,29 @@
         </div>
       </div>
     </div>
+
+		<footer id="gtco-footer" role="contentinfo">
+			<div class="gtco-container">
+
+
+				<div class="row copyright">
+					<div class="col-md-12">
+						<p class="pull-left">
+							<small class="block">&copy; 2016 Academia de Informatica - Brasov. All Rights Reserved.</small>
+							<small class="block">Designed by <a href="http://www.moonofvibes.com" target="_blank">MoonVibes</a></small>
+						</p>
+						<p class="pull-right">
+							<ul class="gtco-social-icons pull-right">
+
+								<li><a href="https://www.facebook.com/academiadeinformatica/"><i class="icon-facebook"></i></a></li>
+
+							</ul>
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</footer>
   </div><!-- END of the container -->
 
 </div><!-- END of the page-->
@@ -364,18 +387,45 @@
 	<script src="js/main.js"></script>
   <script>
 
+	(function(w) {
+	    //private variable
+	    var loaded = false;
+	    w.onload = function() {
+	        loaded = true;
+					setTimeout(function(){
+						$('html, body').animate({scrollTop: $('.tab-content').offset().top}, 2000);
+						},1500)
+	    };
+	})(window);
+
+
+
 
   show('primiiPasi');
-  function show(x){
+  function show(id,expand){
+		if(expand == true ){
+				document.getElementById('contentExpand').style.height = '1050px';
+		}
+		else{
+			document.getElementById('contentExpand').style.height = 'initial';
+		}
     var colection=document.getElementsByClassName("contentContainer");
     for(var i=0;i<colection.length;i++)
       {
-        colection[i].style.opacity=0;
-        colection[i].style.zIndex='1';
+        // colection[i].style.opacity=0;
+        // colection[i].style.zIndex='1';
+
+					colection[i].style.display='none'
       }
-    document.getElementById(x).style.opacity=1;
-    document.getElementById(x).style.zIndex='2';
+    // document.getElementById(id).style.opacity=1;
+    // document.getElementById(id).style.zIndex='2';
+			document.getElementById(id).style.display='block';
+
+			if(window.innerWidth < 992){
+				$('html, body').animate({scrollTop: $(`#${id}`).offset().top}, 2000);
+			}
   }
+
 
 
   </script>
