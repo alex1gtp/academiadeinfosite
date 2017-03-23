@@ -5,13 +5,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Academia de Informatica - Brasov</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="gettemplates.co" />
+	<meta name="description" content="Academia de informatica Brasov Academia de Informatică este un Centru de Formare și Excelență in Informatica pentru elevi, studenți si tineri." />
+	<meta name="keywords" content="informatica, studenti, elevi, c++, cursuri, responsive, Brasov, formare, centru, copii, cursuri, vara, robotica, web" />
+	<meta name="author" content="academia.info.ro" />
 
 
 
-  	<!-- Facebook and Twitter integration -->
+		<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
@@ -137,7 +137,7 @@
     <div class="row" style="width: 100%;">
       <div class="col-md-12 col-sm-12">
         <center>
-          <h1 id="title">Cursuri pentru Elevi</h1>
+          <h1 id="title" class="title-cursuri">Cursuri pentru Elevi</h1>
           <img src="images/bars.png" style="margin-bottom:80px">
         </center>
       </div>
@@ -192,7 +192,7 @@
                     <li>Învățarea într-un mediu plăcut și încurajator.</li>
                   </ul>
                 </div>
-                <a href="preinscriere.html"><button>Inscriete</button></a>
+                <a href="preinscriere.html"><button>Inscrie-te</button></a>
               </div>
               <div class="col-md-4 col-sm-12 col-xs-12">
                 <img class="posterCurs" src="images/courses/PosterPrimiiPasi.min.jpg" width="310" height="435">
@@ -238,7 +238,7 @@
                      <br>"Primii pași în IT".
                   </i></p>
                 </div>
-                <a href="preinscriere.html"><button>Inscriete</button></a>
+                <a href="preinscriere.html"><button>Inscrie-te</button></a>
               </div>
               <div class="col-md-4 col-sm-12 col-xs-12">
                 <img class="posterCurs" src="images/courses/PosterCppM1.png" width="310" height="435">
@@ -272,7 +272,7 @@
                     <li>Pregătirea pentru competiții naționale și internaționale</li>
                   </ul>
                 </div>
-                <a href="preinscriere.html"><button>Inscriete</button></a>
+                <a href="preinscriere.html"><button>Inscrie-te</button></a>
               </div>
               <div class="col-md-4 col-sm-12 col-xs-12">
                 <img class="posterCurs" src="images/courses/PosterRoboticaLegoLeague.jpg" width="310" height="435">
@@ -306,7 +306,7 @@
                         modul din seria "Bazele Programării".
                   </i></p>
                 </div>
-                <a href="preinscriere.html"><button>Inscriete</button></a>
+                <a href="preinscriere.html"><button>Inscrie-te</button></a>
               </div>
               <div class="col-md-4 col-sm-12 col-xs-12">
                 <img class="posterCurs" src="images/courses/posterAppInventor.png" width="310" height="435">
@@ -331,7 +331,7 @@
                   <li>Modern, folosind tehnologii de actualitate</li>
                   <li>Responsive: gata de a fi folosit pe orice device.</li>
                   <li>Dinamic: adaugă animații, acțiuni și meniuri avansate</li>
-                <a href="preinscriere.html"><button>Inscriete</button></a>
+                <a href="preinscriere.html"><button>Inscrie-te</button></a>
               </div>
               <div class="col-md-4 col-sm-12 col-xs-12">
                 <img class="posterCurs" src="images/courses/PosterWebFED.min.png" width="310" height="435">
@@ -398,7 +398,7 @@
 	    w.onload = function() {
 	        loaded = true;
 					setTimeout(function(){
-						$('html, body').animate({scrollTop: $('.tab-content').offset().top}, 2000);
+						$('html, body').animate({scrollTop: $('.title-cursuri').offset().top}, 2000);
 						},1500)
 	    };
 	})(window);
@@ -409,7 +409,7 @@
   show('primiiPasi');
   function show(id,expand){
 		if(expand == true ){
-				document.getElementById('contentExpand').style.height = '1050px';
+				document.getElementById('contentExpand').style.height = '1080px';
 		}
 		else{
 			document.getElementById('contentExpand').style.height = 'initial';

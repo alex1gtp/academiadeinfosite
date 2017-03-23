@@ -1,0 +1,137 @@
+#mata
+{
+	
+	text-align:center; 
+	color:#FA8714;
+	
+	
+	
+}
+
+
+
+
+
+#kill
+
+{
+	font-family: "Courier New";
+	BACKGROUND-image:url("site ochelari.jpg");
+	background-size:100%;
+}
+
+.wrapper{
+	margin: auto;
+	border: 4px double black;
+	min-width: 720px;
+	max-width: 940px;
+	background-color:#3C96BA;
+	padding :30px;
+	
+}
+
+.header{
+	text-align: center;
+	padding: 20px;
+}
+
+
+
+#navigation  li{
+	display: inline;
+	padding:15px;
+}
+
+#navigation {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	padding: 15px;
+	width: 570px;
+	margin: auto;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+a{
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#navigation a:hover{
+	
+	background-color:#D2D2D2;
+	color:#0C5DA5;
+}
+.currentPage
+
+p{
+	width: 600px;
+	margin: auto;
+	text-align:left;
+}
+
+.content{
+	text-align: center;
+}
+/*pentru galerie */
+#h1
+{
+	text-align:center;
+}
+	
+	
+
+/*pentru cursuri */
+#tief
+{
+	margin: auto;
+	border: 4px double black;
+	min-width: 720px;
+	max-width: 940px;
+	background-color:#F2D657;
+	text-align:center;
+	
+	
+}
+/* Contact */
+#ale{
+    font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+
+}
+
+
+
+#tren
+{
+	
+	
+	text-align:center;
+	
+	
+}
+#you
+{
+	text-decoration :underline bold ;
+	
+}
+#potion 
+{
+	background-color:#9AC3FC;
+	table-layout:fixed;
+	
+}
+.kui
+{
+	width :450px;
+	height:425x;
+	margin:auto;
+	
+	
+}
+#tuy
+{
+	-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+}
