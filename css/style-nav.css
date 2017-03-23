@@ -210,6 +210,7 @@ Making sure everything in .hero sits above our :after elements
   height: 0;
   overflow: hidden;
   padding-top: 2.5em;
+  float: left;
 }
 
 #site-nav.is-active {
@@ -238,9 +239,11 @@ Making sure everything in .hero sits above our :after elements
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1800px) {
   #site-nav {
     flex-wrap: nowrap;
+    margin: 0;
+    float: left;
   }
 
   #site-nav .col {
