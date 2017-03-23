@@ -40,6 +40,7 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-nav.css">
 	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/4e3eb34a0b/UntitledProject1/style.css">
 	<link rel="stylesheet" href="css/style-price.css">
 	<link rel="stylesheet" href="scss/style-price.scss">
@@ -54,7 +55,15 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style>
+	@media only screen and (max-width: 1026px) {
+    #logo-nav {
+        display: none;
+    }
+}
+</style>
 	</head>
+
 	<body>
 
 	<div class="gtco-loader"></div>
@@ -80,58 +89,73 @@
 		</header>
 
 
-
 		<div class="nav-size">
-				<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top affix-top" style="
-				padding-left: 50px;
+				<nav id="mainNav" class="navbar  navbar-custom navbar-fixed-top affix-top" style="padding: 0px;">
 
-		">
-						<div class="container">
-								<!-- Brand and toggle get grouped for better mobile display -->
-								<div class="navbar-header page-scroll">
-										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-												<span class="sr-only">Toggle navigation</span>Menu
-										</button>
-										<a class="navbar-brand page-scroll" href="index.html" style="background-color: rgba(34, 34, 34,0.4);">Academia de Info</a>
-								</div>
+							<div class="hero">
 
-								<!-- Collect the nav links, forms, and other content for toggling -->
-								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="  padding-right: 100px;">
-										<ul class="nav navbar-nav navbar-right">
-												<li class="hidden">
-														<a href="#page-top"></a>
-												</li>
-												<li>
-														<a class="page-scroll" href="index.html">Home</a>
-												</li>
-												<li>
-														<a class="page-scroll" href="services.html">Servicii</a>
-												</li>
-												<li>
-														<a class="page-scroll" href="cursuri.html">Cursuri</a>
-												</li>
-												<li>
-														<a class="page-scroll" href="preinscriere.html">Preinscriere</a>
-												</li>
-												<li>
-														<a class="page-scroll" href="galerie.html">Galerie</a>
-												</li>
-												<li>
-														<a class="page-scroll" href="contact.html">Contact</a>
-												</li>
-												<li class="btn-cta" onclick="myFunction()"><a href="#">LogIn</a></li>
-												<script>
-												function myFunction() {
-														alert("Nu esti autorizat !");
-												}
-												</script>
-										</ul>
-								</div>
-								<!-- /.navbar-collapse -->
+							    <header id="masthead" role="banner" style="padding-top: 20px; ">
+							      <div class="container">
+							        <button class="hamburger hamburger--boring" type="button">
+							          <span class="hamburger-box">
+							            <span class="hamburger-inner"></span>
+							          </span>
+							          <span class="hamburger-label">Menu</span>
+							        </button>
+
+							      <form id="masthead-search">
+							      <input type="search" name="s" aria-labelledby="search-label" placeholder="Search&hellip;" class="draw">
+							        <button type="submit">&rarr;</button>
+										</form>
+										<div id="logo-nav">
+										<img src="images/loog-nav.png" style="position:absolute; width:100%; height:auto; max-width: 250px; z-index: 0; clear: left; margin-left: 35%;margin-right: auto;display: block;" align="middle">
+									</div>
+											<nav id="site-nav" role="navigation">
+												<div class="col">
+													<a href="index.html"><h4>Home</h4></a>
+
+												</div>
+												<div class="col">
+													<a href="services.html"><h4>Servicii</h4></a>
+												</div>
+												<div class="col">
+													<a href="cursuri.html"><h4>Cursuri</h4></a>
+												</div>
+												<div class="col">
+												 <a href="preinscriere.html"><h4>Preinscriere</h4></a>
+											 </div>
+											 <div class="col">
+												<a href="instructori.html"><h4>Insctructori</h4></a>
+											</div>
+											<div class="col">
+											 <a href="realizari.html"><h4>Realizari</h4></a>
+											 	<ul>
+													<li>Primii Pasi in IT</li>
+													<li>AppInventor</li>
+													<li>WEB Modul 1</li>
+													<li>C++</li>
+												</ul>
+										 </div>
+										 <div class="col">
+											<a href="contact.html"><h4>Contact</h4></a>
+										</div>
+							          <div class="col">
+							            <ul class="social">
+							              <li><a href=""><svg title="Facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>
+							              <li><a href=""><svg title="Twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>
+							              <li><a href=""><svg title="LinkedIn"><use xlink:href="#icon-linkedin"></use></svg></a></li>
+							            </ul>
+							          </div>
+							      </nav>
+
+							  </header>
+							</div>
+
 						</div>
 						<!-- /.container-fluid -->
 				</nav>
 			</div>
+
 
   <div class="gtco-container">
     <div class="row" style="width: 100%;">
