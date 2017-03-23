@@ -1,6 +1,7 @@
 #popUpBox{
     width:               50%;
     height:              545px;
+    min-width:           700px;
     background-color:    #fff;
     position:            fixed;
     z-index:             99;
@@ -24,21 +25,16 @@
 #popUpHeader span:before {
   content:      'x';
   color:        #fff;
-  float:        right;
+  float:        left;
   font-size:    18px;
-  margin-right: 3%;
+  margin-left: 3%;
   margin-top:   1px;
   cursor:       pointer;
   font-weight:  300;
   font-family:  "Lato", sans-serif;
 }
 
-#popUpHeader p{
-  color:       #fff;
-  float:       left;
-  margin-left: 3%;
-  margin-top:  5px;
-}
+
 
 #sectionOne{
   margin:30px 0;

@@ -39,6 +39,11 @@ body {
     width: 750px;
 }
 
+@media (max-width: 960px)
+  #popUpBox{
+    left:20%;
+  }
+
 .container {
     padding-right: 15px;
     padding-left: 15px;

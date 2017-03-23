@@ -11,6 +11,7 @@
 
 
 
+
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
@@ -109,7 +110,31 @@
     #logo-nav {
         display: none;
     }
+		/*#popUpBox{
+			left:30%;
+		}*/
 }
+
+@media only screen and (max-width: 930px) {
+
+	#popUpBox{
+		left:35%;
+		min-width: 600px;
+	}
+}
+
+@media only screen and (max-width: 685px) {
+
+	#popUpBox{
+		left:0%;
+		margin-left:0px;
+		width: 100%;
+	}
+	#instructorImage{
+		margin-right: 50px;
+	}
+}
+
 
 	</style>
 	</head>
@@ -214,7 +239,7 @@
 	<center><h1>Divizia Software</h1><center><br><Br>
 	<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
 		<div class="gtco-staff">
-			<img src="images/profile/razvan.jpg" onclick="showPopUp('images/profile/razvan.jpg','Razvan Ardelean','Web și Embedded Development')">
+			<img src="images/profile/razvan.jpg" onclick="showPopUp('images/profile/razvan.jpg','Razvan Ardelean','Web și Embedded Development','razvan')">
 			<h3>Razvan Ardelean</h3>
 			<strong class="role">Web și Embedded Development</strong>
 
@@ -228,7 +253,7 @@
 	</div>
 	<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
 		<div class="gtco-staff">
-			<img src="images/profile/timi.jpg" onclick="showPopUp('images/profile/timi.jpg','Timi Ardelean','Android Development')">
+			<img src="images/profile/timi.jpg" onclick="showPopUp('images/profile/timi.jpg','Timi Ardelean','Android Development','timi')">
 			<h3>Timi Ardelean</h3>
 			<strong class="role">Android Development</strong>
 
@@ -242,7 +267,7 @@
 	</div>
 	<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
 		<div class="gtco-staff">
-			<img src="images/profile/dani.jpg" onclick="showPopUp('images/profile/dani.jpg','Daniel Calaver','Robotic Developer')">
+			<img src="images/profile/dani.jpg" onclick="showPopUp('images/profile/dani.jpg','Daniel Calaver','Robotic Developer','dani')">
 			<h3>Daniel Calaver</h3>
 			<strong class="role">Robotic Developer</strong>
 
@@ -258,7 +283,7 @@
 <div class="row"  style="background-color: #e0e0e0;"		>
 	<div class="col-md-6 animate-box" data-animate-effect="fadeIn">
 		<div class="gtco-staff">
-			<img src="images/profile/iancu.jpg" onclick="showPopUp('images/profile/iancu.jpg','Alex Iancu','Front-End Developer')">
+			<img src="images/profile/iancu.jpg" onclick="showPopUp('images/profile/iancu.jpg','Alex Iancu','Front-End Developer','iancu')">
 			<h3>Alex Iancu</h3>
 			<strong class="role">Front-End Developer</strong>
 
@@ -272,7 +297,7 @@
 	</div>
 	<div class="col-md-6 animate-box" data-animate-effect="fadeIn">
 		<div class="gtco-staff">
-			<img src="images/profile/georgian.jpg" onclick="showPopUp('images/profile/georgian.jpg','Georgian Stan','Front-End Developer')">
+			<img src="images/profile/georgian.jpg" onclick="showPopUp('images/profile/georgian.jpg','Georgian Stan','Front-End Developer','georgian')">
 			<h3>Georgian Stan</h3>
 			<strong class="role">Front-End Developer</strong>
 						<ul class="gtco-social-icons">
@@ -300,7 +325,7 @@
 
 			<div id="sectionTwo">
 				<h2>Realizari</h2>
-				<p>asdd
+				<p id="realizariContent">asdd
 				 </p>
 			</div>
 
@@ -354,19 +379,44 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script>
-	function showPopUp(imgId,nume,specializare){
+
+	var realizari={
+		razvan:"Realizari Razvan",
+		timi:"Realizari Timi",
+		dani:"Realizari Dani",
+		iancu:"Realizari Iancu",
+		georgian:"Realizari Georgian"
+	}
+	function showPopUp(imgId,nume,specializare,nume){
 
 		$("#popUpBox").animate({top:'150px'},150)
 		$("#instructorImage").attr('src',imgId);
 		$("#instructor").text(nume);
 		$("#specializare").text(specializare);
-		$("body").css("overflow","hidden");
+		switch(nume){
+			case 'razvan':
+				$("#realizariContent").text(realizari.razvan);
+				break;
+			case 'timi':
+					$("#realizariContent").text(realizari.timi);
+					break;
+			case 'dani':
+					$("#realizariContent").text(realizari.dani);
+					break;
+			case 'iancu':
+					$("#realizariContent").text(realizari.iancu);
+					break;
+			case 'georgian':
+					$("#realizariContent").text(realizari.georgian);
+					break;
+		}
+		// $("body").css("overflow","hidden");
 
 	}
 
 function closePopUp(){
 	$("#popUpBox").animate({top:'-600px'},100);
-	$("body").css("overflow","scroll");
+	// $("body").css("overflow","scroll");
 }
 	</script>
 
