@@ -3,11 +3,10 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:400,500';
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
+
   margin: 0;
   padding: 0;
+  
 }
 
 .container {
@@ -248,11 +247,13 @@ Making sure everything in .hero sits above our :after elements
 
   #site-nav .col {
     flex: 0 0 20%;
+    float: left;
   }
 
   #site-nav .col:last-child {
     display: flex;
     justify-content: flex-end;
+    float: left;
   }
 }
 
