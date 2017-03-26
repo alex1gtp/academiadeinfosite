@@ -161,12 +161,11 @@
     <div class="row" style="width: 100%;">
       <div class="col-md-12 col-sm-12">
         <center>
-          <h1 id="title" class="title-cursuri">Cursuri pentru Elevi</h1>
-          <img src="images/bars.png" style="margin-bottom:80px">
+          <h1 id="title" class="title-cursuri">Cursuri</h1>
         </center>
       </div>
     </div>
-    <div class="row" style="width: 100%;" >
+    <div class="row" style="width: 100%;">
       <div class="col-md-3 col-sm-12 col-xs-12" id="contentExpand">
         <div id="cursuriPanel">
           <ul id="leftMenu">
@@ -422,8 +421,8 @@
 	    w.onload = function() {
 	        loaded = true;
 					setTimeout(function(){
-						$('html, body').animate({scrollTop: $('.title-cursuri').offset().top}, 2000);
-						},1500)
+						$('html, body').animate({scrollTop: $('.title-cursuri').offset().top-100}, 1000);
+						},1000)
 	    };
 	})(window);
 
@@ -451,7 +450,7 @@
 			document.getElementById(id).style.display='block';
 
 			if(window.innerWidth < 992){
-				$('html, body').animate({scrollTop: $(`#${id}`).offset().top}, 2000);
+				$('html, body').animate({scrollTop: ($(`#${id}`).offset().top)}, 1000);
 			}
   }
 

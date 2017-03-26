@@ -1,0 +1,8 @@
+1. Nav-ul e cam mare. (și scrisul și grosimea)
+2. În meniu scrie "insctructori".
+3. Background pentru text peste tot.
+4. Butonul Galerie nu merge (de pe secțiunea principală) -> poate lângă el buton către cursuri
+5. Adăugat diacritice
+6. ? Searchul conectat cu google api :?
+
+-> urmează să trecem pe un alt branch unde să avem și back-end. Va trebui mult refactoring acolo.
